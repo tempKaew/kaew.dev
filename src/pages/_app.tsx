@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app'
 import { Bai_Jamjuree } from 'next/font/google'
 import Head from 'next/head'
 export const bai = Bai_Jamjuree({
-  weight: ['200', '400'],
+  weight: ['200', '400', '700'],
   subsets: ['thai'],
   display: 'swap'
 })
