@@ -1,4 +1,5 @@
 import Container from '@/src/components/Container'
+import { LaravelIcon, NextJsIcon, PhpIcon, VSCodeIcon } from '@/src/components/Icons'
 import { animateDownOpacity, animateSlideRightOpacity } from '@/src/utils/animation'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
@@ -14,8 +15,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container className="flex h-screen min-h-screen grid-cols-1 items-center justify-center">
-        <div className="font-bai">
+      <Container className="gab-15 grid h-screen min-h-screen grid-cols-12 items-center">
+        <div className="col-span-8 font-bai">
           <motion.p
             className="inline-flex text-4xl font-bold text-slate"
             initial={animateDownOpacity.initial}
@@ -39,6 +40,25 @@ export default function Home() {
             I'm <span className="text-green">Prasit</span>.cpt
           </motion.p>
           <p className="text-slate">current favorite tech stack/tools:</p>
+          <motion.ul
+            className="flex space-x-2"
+            initial="initial"
+            animate="animate"
+            variants={{ animate: { transition: { staggerChildren: 0.05, delayChildren: 0.4 } } }}
+          >
+            <motion.li variants={animateDownOpacity} transition={{ duration: 0.5 }}>
+              <PhpIcon className="h-6 w-6 text-white" />
+            </motion.li>
+            <motion.li variants={animateDownOpacity} transition={{ duration: 0.5 }}>
+              <LaravelIcon className="h-6 w-6 text-white" />
+            </motion.li>
+            <motion.li variants={animateDownOpacity} transition={{ duration: 0.5 }}>
+              <VSCodeIcon className="h-6 w-6 text-white" />
+            </motion.li>
+            <motion.li variants={animateDownOpacity} transition={{ duration: 0.5 }}>
+              <NextJsIcon className="h-6 w-6 text-white" />
+            </motion.li>
+          </motion.ul>
         </div>
       </Container>
       <Container className="flex h-screen min-h-screen grid-cols-1 items-center justify-center">
@@ -48,7 +68,7 @@ export default function Home() {
             initial={animateSlideRightOpacity.initial}
             whileInView={animateSlideRightOpacity.animate}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
           >
             กำลัง dev อยู่
           </motion.h1>

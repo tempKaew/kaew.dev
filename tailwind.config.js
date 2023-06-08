@@ -12,6 +12,13 @@ module.exports = {
     extend: {
       fontFamily: {
         bai: ['var(--font-bai)', 'sans-serif']
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          md: '2rem'
+        }
       }
     },
     container: {
